@@ -25,3 +25,8 @@ For ease of development you can create additional script for running only one ap
 React apps were bootstraped by running `npx create-react-app react-app --typescript` inside `/packages` folder and then `rm -rf react-app/node_modules react-app/yarn.lock` to remove local `node_modules` and `*.lock` files.
 
 If you have ideas how to improve this setup please file an issue.
+
+## Caveats
+
+- when running CRA dev server (`yarn start`) through Lerna you need to reload the opened browser tab sometimes to see the app, but then it sould work without any issues.
+- if you want to run multiple CRA projects simultaneously you need to manualy configure `PORT` environment variable for each React app, ie. using `.env` file as described [in the official documentation](https://facebook.github.io/create-react-app/docs/advanced-configuration). Otherwise Lerna script will have some issues.
