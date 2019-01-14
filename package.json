@@ -1,0 +1,17 @@
+{
+  "name": "ui-monorepo",
+  "private": true,
+  "scripts": {
+    "start": "lerna run start --parallel",
+    "start:hooks": "lerna run start --scope @ui/react-app-hooks --scope @ui/shared --parallel",
+    "setup": "npx lerna bootstrap"
+  },
+  "devDependencies": {
+    "lerna": "^3.10.2"
+  },
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ]
+  }
+}
